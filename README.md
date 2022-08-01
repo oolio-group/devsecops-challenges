@@ -3,13 +3,14 @@
 
 ## Challenges
 
-### 01: Optimize Docker
+### 01: Optimize Build
 
+Each build cost money.
 Please help us review and optimize the dockerfile to build an image with as effective as possible.
 
 ### 02: Design and deploy infra
 
-Please help us writting terraform script (using public modules are allow) to deploy AWS infra to host:
+Please help us define terraform script (using public modules are allow) to deploy AWS infra to host:
 
 - VPC
 - Backend on ECS (can use nginx as example image)
@@ -21,4 +22,4 @@ Please help us writting terraform script (using public modules are allow) to dep
 
 - Scan to report resources without tag
 
-### 03: Our engineer writting k8s yaml to deploy resources but it's not work and we dont know why? Please review the k8s manifests and make recommendation to deploy an application with reliability and security is a must
+### 03: Our engineer define k8s yaml to deploy resources but it's not work and we don't know why? Please review the k8s manifests and make recommendation to deploy an application with reliability and security is a must
