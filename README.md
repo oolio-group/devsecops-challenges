@@ -1,5 +1,8 @@
 # devsecops-challenges
 
+## Instruction
+
+Download repo as zip and send for the candidates
 
 ## Challenges
 
