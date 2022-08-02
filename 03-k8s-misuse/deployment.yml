@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+  labels:
+    app.kubernetes.io/name: api
+    app.kubernetes.io/part-of: api-services
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-svc
+  template:
+    metadata:
+      labels:
+        app: api-svc
+    spec:
+      serviceAccountName: api-svc-sa
+      containers:
+        - image: api-service
+          name: api-service
+          securityContext:
+            privileged: true
+          ports:
+            - containerPort: 80
+              name: http
+          envFrom:
+            - configMapRef:
+                name: default-env-config
+          env:
+            - name: PORT
+              value: "80"
+            - name: DATABASE_HOST
+              value: "api-database.example.local"
+            - name: DATABASE_NAME
+              value: "api-database"
+            - name: DATABASE_USERNAME
+              value: "root"
+            - name: DATABASE_PASSWORD
+              value: "root^123"
