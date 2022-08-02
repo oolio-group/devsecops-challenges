@@ -11,6 +11,10 @@ Download repo as zip and send for the candidates
 Each build cost money.
 Please help us review and optimize the dockerfile to build an image with as effective as possible.
 
+#### Bonus point
+
+- There is an reliability issue with this app. Please spot it if you found
+
 ### 02: Design and deploy infra
 
 Please help us define terraform script (using public modules are allow) to deploy AWS infra to host:
